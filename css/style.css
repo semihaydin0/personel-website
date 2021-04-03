@@ -1,0 +1,104 @@
+@font-face { font-family: DancingScript; src: url('/fonts/DancingScript.ttf'); }
+@font-face { font-family: CourierPrime; src: url('/fonts/CourierPrime.ttf'); }
+@font-face { font-family: SourceCodePro; src: url('/fonts/SourceCodePro.ttf'); }
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+  flex-direction: column;
+	overflow: hidden;
+}
+
+.header{
+  width: 100vw;
+  height: 40px;
+  display: grid;
+}
+
+.header-zone-1{
+  grid-column: 1;
+}
+
+.header-zone-1 a.name{
+	font-size: 40px;
+  font-family: DancingScript;
+  text-decoration: none;
+  color: white;
+}
+
+.header-zone-2{
+  grid-column: 2;
+}
+
+.header-zone-2 img{
+  width: 35px;
+  height: 35px;
+  -webkit-transition: all 0.25s ease;
+  -moz-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  -ms-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+.header-zone-2 img:hover{
+  width: 40px;
+  height: 40px;
+}
+
+.header-zone-2 a.links{
+  float: right;
+	text-decoration: none;
+  margin-right: 15px;
+	margin-top: 5px;
+}
+
+.container{
+	width: 100vw;
+	height: calc(100vh - 80px);
+	align-items: center;
+  justify-content: center;
+	display: flex;
+}
+
+.container p{
+	font-size: 6vw;
+	font-family: SourceCodePro;
+  border-right: solid 3px rgba(255,255,255, 0.9);
+  white-space: nowrap;
+  overflow: hidden;
+  color: white;
+	animation: animated-text 4s steps(29,end) 1s 1 normal both,animated-cursor 600ms steps(29,end) infinite;
+}
+
+.footer{
+  width: 100vw;
+  height: 40px;
+  position: fixed;
+  text-align: center;
+  font-family: CourierPrime;
+  color: white;
+  bottom: 0px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes animated-text{
+  from{width: 0;}
+  to{width: 58vw;}
+}
+
+@keyframes animated-cursor{
+  from{border-right-color: rgba(255,255,255, 0.9);}
+  to{border-right-color: transparent;}
+}
