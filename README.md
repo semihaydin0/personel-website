@@ -2,7 +2,7 @@
 *** Semih Aydın 2021
 -->
 
-# Personel website
+# Personel Website
 
 ![Demo](./demo/site.png)
 
